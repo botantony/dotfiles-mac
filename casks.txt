@@ -1,0 +1,9 @@
+font-hack-nerd-font
+gstreamer-runtime
+iina
+kitty
+obsidian
+postman
+powershell
+virtualbox
+wine-stable
