@@ -1,3 +1,6 @@
+brave-browser
+discord
+font-fira-code
 font-hack-nerd-font
 gstreamer-runtime
 iina
