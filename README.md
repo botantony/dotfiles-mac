@@ -7,4 +7,7 @@ My dotfiles and a simple bash script that installs my [Homebrew](https://brew.sh
 4. [Oh My Zsh](https://ohmyz.sh/)
 
 ## Installment & usage
-Use run `./brew.sh --install` and `stow .`. Before commiting new version run `./brew.sh --gen`.
+1. Copy the repo (`git clone --recursive https://github.com/botantony/dotfiles-mac.git`)
+2. Use `./brew.sh --install` and `stow .`
+
+Before commiting new version run `./brew.sh --gen`.

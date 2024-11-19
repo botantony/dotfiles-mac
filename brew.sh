@@ -5,7 +5,7 @@ if ! command -v brew &>/dev/null; then
     exit 1
 fi
 
-if [ ! -d "~/.oh-my-zsh" ]; then
+if [ ! -d "${HOME}/.oh-my-zsh" ]; then
     echo "Oh My Zsh is not installed!"
     exit 1
 fi
