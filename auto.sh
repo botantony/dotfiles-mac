@@ -10,9 +10,9 @@ if [ ! -f "${HOME}/.config/crontab/${CRON_FILE}" ]; then
     crontab ${HOME}/.config/crontab/${CRON_FILE}
 fi
 
-sh ${SCRIPT_DIR}/brew.sh --gen
-
 cd ${SCRIPT_DIR} || exit 1
+
+sh ${SCRIPT_DIR}/brew.sh --gen
 
 if [[ -n $(git status --porcelain) ]]; then
     echo "Config changes detected, preparing to commit."
