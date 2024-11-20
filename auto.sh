@@ -5,7 +5,7 @@ CRON_FILE="cfg_auto"
 
 if [ ! -f "${HOME}/.config/crontab/${CRON_FILE}" ]; then
     mkdir -p ${HOME}/.config/crontab
-    echo "0 9 * * 1 ${SCRIPT_DIR}/auto.sh" > ${HOME}/.config/crontab/${CRON_FILE}
+    echo "0 9 * * * ${SCRIPT_DIR}/auto.sh" > ${HOME}/.config/crontab/${CRON_FILE}
     echo "Created \"${CRON_FILE}\" in \"${HOME}/.config/crontab\""
     crontab ${HOME}/.config/crontab/${CRON_FILE}
 fi
