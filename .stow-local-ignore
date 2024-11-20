@@ -23,7 +23,10 @@ _darcs
 ^/COPYING
 
 brew.sh
+auto.sh
 casks.txt
 formulae.txt
+
+^crontab$
 
 \.DS_Store

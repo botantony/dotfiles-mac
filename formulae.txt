@@ -173,6 +173,7 @@ srt
 stow
 svt-av1
 tbb
+tealdeer
 tesseract
 theora
 tidy-html5
