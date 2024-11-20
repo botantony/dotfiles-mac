@@ -59,6 +59,7 @@ jpeg-xl
 jq
 krb5
 lame
+lazygit
 leptonica
 libarchive
 libass

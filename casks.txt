@@ -1,4 +1,5 @@
 brave-browser
+cool-retro-term
 discord
 font-fira-code
 font-hack-nerd-font
