@@ -17,9 +17,11 @@ cd ${SCRIPT_DIR} || exit 1
 if [[ -n $(git status --porcelain) ]]; then
     echo "Config changes detected, preparing to commit."
 
+    git checkout auto-update
     git submodule update --recursive --remote
     git add .
     git commit -m "Automatic commit: $(date '+%Y-%m-%d %H:%M:%S')"
     git push origin auto-update
+    git checkout main
     echo "Pushed changes"
 fi
