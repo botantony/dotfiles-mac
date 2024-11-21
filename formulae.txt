@@ -165,6 +165,7 @@ rustup-init
 s-lang
 sdl2
 shaderc
+skhd
 sl
 snappy
 speedtest-cli
@@ -197,10 +198,12 @@ x265
 xorgproto
 xvid
 xz
+yabai
 yazi
 yt-dlp
 z3
 zeromq
+zig
 zimg
 zsh-autosuggestions
 zsh-syntax-highlighting

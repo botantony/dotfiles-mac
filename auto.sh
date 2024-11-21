@@ -3,6 +3,8 @@
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
 CRON_FILE="cfg_auto"
 
+export PATH=$PATH:/usr/bin:/bin:/usr/local/bin
+
 if [ ! -f "${HOME}/.config/crontab/${CRON_FILE}" ]; then
     mkdir -p ${HOME}/.config/crontab
     echo "0 22 * * * ${SCRIPT_DIR}/auto.sh" > ${HOME}/.config/crontab/${CRON_FILE}
