@@ -101,6 +101,9 @@ HL_GIT_STATUS_SYMBOLS[CONFLICTS]="%{$red%}✘"
 HL_GIT_STATUS_SYMBOLS[CLEAN]="%{$green%}✔"
 HL_CLOCK_MODE='on'
 HL_CLOCK_SOURCE="date +%+"
+# HL_CLOCK_MODE='on'
+# HL_CLOCK_TEMPLATE="%{$faint%} ... %{$reset$HL_LAYOUT_STYLE%}╰"
+# HL_CLOCK_SOURCE="date +%+"
 HL_ERR_MODE='detail'
 
 # export MANPATH="/usr/local/man:$MANPATH"
