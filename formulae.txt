@@ -18,7 +18,9 @@ cjson
 cling
 cmatrix
 composer
+coreutils
 curl
+dart-sdk
 dav1d
 diffutils
 exiftool
@@ -37,6 +39,8 @@ gcc
 gd
 gettext
 gh
+ghc
+ghcup
 giflib
 gifsicle
 glib
@@ -57,6 +61,7 @@ isl
 jpeg-turbo
 jpeg-xl
 jq
+kotlin
 krb5
 lame
 lazygit
@@ -165,6 +170,7 @@ rustup-init
 s-lang
 sdl2
 shaderc
+skhd
 sl
 snappy
 speedtest-cli
@@ -197,10 +203,12 @@ x265
 xorgproto
 xvid
 xz
+yabai
 yazi
 yt-dlp
 z3
 zeromq
+zig
 zimg
 zsh-autosuggestions
 zsh-syntax-highlighting

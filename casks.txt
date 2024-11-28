@@ -9,5 +9,7 @@ kitty
 obsidian
 postman
 powershell
+spaceid
 virtualbox
 wine-stable
+xquartz
