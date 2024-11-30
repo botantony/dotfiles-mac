@@ -47,6 +47,7 @@ glib
 gmp
 gnutls
 go
+gpatch
 graphite2
 grep
 groonga
@@ -58,6 +59,7 @@ icu4c@75
 icu4c@76
 imath
 isl
+jadx
 jpeg-turbo
 jpeg-xl
 jq
@@ -134,11 +136,13 @@ msgpack
 mujs
 ncurses
 neovim
+net-snmp
 nettle
 ninvaders
 node
 numpy
 oniguruma
+opam
 openblas
 opencore-amr
 openexr
@@ -162,6 +166,7 @@ python@3.13
 rav1e
 readline
 redis
+ripgrep
 rtmpdump
 rubberband
 rust
