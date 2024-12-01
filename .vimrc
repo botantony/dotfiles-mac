@@ -5,3 +5,4 @@ colorscheme default
 syntax on
 set autoindent
 set ruler
+set clipboard=unnamed
