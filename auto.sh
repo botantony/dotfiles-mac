@@ -12,7 +12,7 @@ fi
 
 cd ${SCRIPT_DIR} || exit 1
 
-sh ${SCRIPT_DIR}/brew.sh --gen
+sh ${SCRIPT_DIR}/brew bundle dump --force
 
 if [[ -n $(git status --porcelain) ]]; then
     echo "Config changes detected, preparing to commit."
