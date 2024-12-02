@@ -9,7 +9,7 @@ My dotfiles and a simple bash script that installs my [Homebrew](https://brew.sh
 
 ## Installment & usage
 1. Copy the repo (`git clone --recursive https://github.com/botantony/dotfiles-mac.git`)
-2. Use `./brew.sh --install` and `stow .`
+2. Use `brew bundle install` and `stow .`
 3. (optional) Run `./auto.sh` to do automatic commits to `auto-load` branch
 
-Before commiting new version run `./brew.sh --gen` and `git submodule update --recursive --remote`.
+Before commiting new version run `brew bundle dump --force` and `git submodule update --recursive --remote`.
