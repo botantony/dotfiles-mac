@@ -22,10 +22,8 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
-brew.sh
+Brewfile
 auto.sh
-casks.txt
-formulae.txt
 
 ^crontab$
 
