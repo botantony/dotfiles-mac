@@ -2,7 +2,7 @@
 
 read -p "Commit description: " desc
 
-$PWD=$(pwd)
+$CWD=$(pwd)
 cd ~/.dotfiles
 
 brew bundle dump --force
@@ -18,4 +18,4 @@ if [[ -n $(git status --porcelain) ]]; then
     echo "Pushed changes"
 fi
 
-cd ${PWD}
+cd ${CWD}
