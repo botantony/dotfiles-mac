@@ -159,6 +159,8 @@ alias fnvim='nvim $(fzf --preview="bat --color=always {}")'
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+export HOMEBREW_NO_ENV_HINTS=1
+
 # Created by `pipx` on 2024-11-17 18:49:35
 export PATH="$PATH:/${HOME}/.local/bin"
 
