@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="headline/headline"
+ZSH_THEME="minimal"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -73,36 +73,6 @@ zstyle ':omz:update' frequency 7
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
-# setting theme configuration
-HL_LAYOUT_TEMPLATE=(
-  _PRE    "${IS_SSH+ssh }" # shows "ssh " if this is an ssh session
-  USER    '...'
-  HOST    ' at ...'
-  VENV    ' with ...'
-  PATH    ' in ...'
-  _SPACER '' # special, only shows when compact, otherwise fill with space
-  BRANCH  ' on ...'
-  STATUS  ' (...)'
-  _POST   ''
-)
-HL_CONTENT_TEMPLATE=(
-  USER   "%{$bold$red%} ..."
-  HOST   "%{$bold$yellow%}󰇅 ..."
-  VENV   "%{$bold$green%} ..."
-  PATH   "%{$bold$blue%} ..."
-  BRANCH "%{$bold$cyan%} ..."
-  STATUS "%{$bold$magenta%}..."
-)
-HL_GIT_COUNT_MODE='on'
-HL_GIT_SEP_SYMBOL='|'
-HL_GIT_STATUS_SYMBOLS[CONFLICTS]="%{$red%}✘"
-HL_GIT_STATUS_SYMBOLS[CLEAN]="%{$green%}✔"
-# HL_CLOCK_MODE='on'
-# HL_CLOCK_TEMPLATE="%{$faint%} ... %{$reset$HL_LAYOUT_STYLE%}╰"
-# HL_CLOCK_SOURCE="date +%+"
-HL_ERR_MODE='detail'
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

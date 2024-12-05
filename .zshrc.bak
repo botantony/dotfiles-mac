@@ -1,0 +1,42 @@
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+alias clr="clear && clear"
+alias c="clear && clear"
+alias reload="source ~/.zshrc"
+alias upd="brew upgrade && brew cleanup"
+
+# yazi
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    builtin cd -- "$cwd"
+  fi
+  rm -f -- "$tmp"
+}
+
+function vman() {
+  nvim -c "Man $1 $2" -c 'silent only'
+}
+
+source <(fzf --zsh)
+
+alias fnvim='nvim $(fzf --preview="bat --color=always {}")'
+
+# source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export HOMEBREW_NO_ENV_HINTS=1
+
+# Created by `pipx` on 2024-11-17 18:49:35
+export PATH="$PATH:/${HOME}/.local/bin"
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/${HOME}/.opam/opam-init/init.zsh' ]] || source '/${HOME}/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration
