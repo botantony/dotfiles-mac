@@ -113,7 +113,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
-local mac = vim.fn.has("macunix")
+local mac = vim.fn.has("macunix") == 1
 local themeSettings = {
 	github = mac and "folke/tokyonight.nvim" or "dracula/vim",
 	colorscheme = mac and "tokyonight-moon" or "dracula",

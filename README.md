@@ -1,10 +1,10 @@
-My dotfiles and a simple bash script that installs my [Homebrew](https://brew.sh) packages.
+My dotfiles.
 
 ## Dependencies
 1. macOS
-2. `GNU stow` (tho `./brew.sh` script installs it automatically)
-3. `crontab`
-4. `brew`
+2. [`brew`](https://brew.sh)
+3. `GNU stow` (tho `brew bundle install` script installs it automatically)
+4. `crontab`
 5. [Oh My Zsh](https://ohmyz.sh/)
 
 ## Installment & usage
@@ -12,4 +12,4 @@ My dotfiles and a simple bash script that installs my [Homebrew](https://brew.sh
 2. Use `brew bundle install` and `stow .`
 3. (optional) Run `./auto.sh` to do automatic commits to `auto-load` branch
 
-Before commiting new version run `brew bundle dump --force` and `git submodule update --recursive --remote`.
+Before commiting new version run `brew bundle dump --force` (or just use `commit.sh` script).
