@@ -73,8 +73,12 @@ vim.opt.scrolloff = 10
 --  See `:help hlsearch`
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- go to the beginning/end
 vim.keymap.set("n", "L", "$", { noremap = true })
 vim.keymap.set("n", "H", "^", { noremap = true })
+-- cyrillic
+vim.keymap.set("n", "Д", "$", { noremap = true })
+vim.keymap.set("n", "Р", "^", { noremap = true })
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
@@ -100,6 +104,14 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
+
+-- Open a small terminal at the bottom
+vim.keymap.set("n", "<leader>ts", function()
+	vim.cmd.vnew()
+	vim.cmd.term()
+	vim.cmd.wincmd("J")
+	vim.api.nvim_win_set_height(0, 15)
+end)
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
