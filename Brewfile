@@ -82,7 +82,7 @@ brew "speedtest-cli"
 brew "stow"
 brew "tealdeer"
 brew "tmux"
-brew "trash-cli"
+brew "trash-cli", link: true
 brew "tree"
 brew "vim"
 brew "wget"

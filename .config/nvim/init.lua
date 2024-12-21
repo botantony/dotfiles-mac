@@ -125,19 +125,13 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
-local mac = vim.fn.has("macunix") == 1
-local themeSettings = {
-	github = mac and "folke/tokyonight.nvim" or "dracula/vim",
-	colorscheme = mac and "tokyonight-moon" or "dracula",
-}
-
 require("lazy").setup({
 	"tpope/vim-sleuth",
 	{
-		themeSettings.github,
+		"blazkowolf/gruber-darker.nvim",
 		priority = 1000,
 		init = function()
-			vim.cmd.colorscheme(themeSettings.colorscheme)
+			vim.cmd.colorscheme("gruber-darker")
 			vim.cmd.hi("Comment gui=none")
 		end,
 	},
