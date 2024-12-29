@@ -40,7 +40,7 @@ alt - n : yabai -m space --focus next || yabai -m space --focus first
 alt - p : yabai -m space --focus prev || yabai -m space --focus last
 
 # open terminal
-alt - return : kitty --single-instance ~
+alt - return : open -a Ghostty ~
 # and browser
 shift + alt - return : open -n -a "Brave Browser"
 
