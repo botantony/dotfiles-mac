@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 read -p "Commit description: " desc
 
-$CWD=$(pwd)
+CWD=$(pwd)
 cd ~/.dotfiles
 
 brew bundle dump --force
