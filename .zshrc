@@ -106,8 +106,6 @@ set -o vi
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-alias clr="clear && clear"
-alias c="clear && clear"
 alias reload="source ~/.zshrc"
 alias upd="brew upgrade && brew cleanup"
 
@@ -129,14 +127,16 @@ source <(fzf --zsh)
 
 alias fnvim='nvim $(fzf --preview="bat --color=always {}")'
 
+alias info='info --vi-keys'
+
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export HOMEBREW_NO_ENV_HINTS=1
+export PATH="${HOMEBREW_PREFIX}/lib/ruby/gems/3.4.0/bin:$PATH"
 
 # Created by `pipx` on 2024-11-17 18:49:35
 export PATH="$PATH:/${HOME}/.local/bin"
-
 
 # BEGIN opam configuration
 # This is useful if you're using opam as it adds:
@@ -149,3 +149,4 @@ export PATH="$PATH:/${HOME}/.local/bin"
 export GPG_TTY=$(tty)
 
 export DOTNET_ROOT="$HOMEBREW_PREFIX/opt/dotnet/libexec"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"

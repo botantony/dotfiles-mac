@@ -32,12 +32,12 @@ ctrl + alt - l : yabai -m window --warp east
 alt - w : yabai -m window --close
 
 # create or destroy desktops
-alt - c : yabai -m space --create
-alt - x : "${HOME}"/.config/yabai/destroy-space.sh
+# alt - c : yabai -m space --create
+# alt - x : "${HOME}"/.config/yabai/destroy-space.sh
 
 # move between spaces
-alt - n : yabai -m space --focus next || yabai -m space --focus first
-alt - p : yabai -m space --focus prev || yabai -m space --focus last
+# alt - n : yabai -m space --focus next || yabai -m space --focus first
+# alt - p : yabai -m space --focus prev || yabai -m space --focus last
 
 # open terminal
 alt - return : open -a Ghostty ~
@@ -45,28 +45,28 @@ alt - return : open -a Ghostty ~
 shift + alt - return : open -n -a "Brave Browser"
 
 # focus on a space
-alt - 1 : yabai -m space --focus 1
-alt - 2 : yabai -m space --focus 2
-alt - 3 : yabai -m space --focus 3
-alt - 4 : yabai -m space --focus 4
-alt - 5 : yabai -m space --focus 5
-alt - 6 : yabai -m space --focus 6
-alt - 7 : yabai -m space --focus 7
-alt - 8 : yabai -m space --focus 8
-alt - 9 : yabai -m space --focus 9
-alt - 0 : yabai -m space --focus 10
+# alt - 1 : yabai -m space --focus 1
+# alt - 2 : yabai -m space --focus 2
+# alt - 3 : yabai -m space --focus 3
+# alt - 4 : yabai -m space --focus 4
+# alt - 5 : yabai -m space --focus 5
+# alt - 6 : yabai -m space --focus 6
+# alt - 7 : yabai -m space --focus 7
+# alt - 8 : yabai -m space --focus 8
+# alt - 9 : yabai -m space --focus 9
+# alt - 0 : yabai -m space --focus 10
 
 # move windows to the space
-shift + alt - 1 : yabai -m window --space 1
-shift + alt - 2 : yabai -m window --space 2
-shift + alt - 3 : yabai -m window --space 3
-shift + alt - 4 : yabai -m window --space 4
-shift + alt - 5 : yabai -m window --space 5
-shift + alt - 6 : yabai -m window --space 6
-shift + alt - 7 : yabai -m window --space 7
-shift + alt - 8 : yabai -m window --space 8
-shift + alt - 9 : yabai -m window --space 9
-shift + alt - 0 : yabai -m window --space 10
+# shift + alt - 1 : yabai -m window --space 1
+# shift + alt - 2 : yabai -m window --space 2
+# shift + alt - 3 : yabai -m window --space 3
+# shift + alt - 4 : yabai -m window --space 4
+# shift + alt - 5 : yabai -m window --space 5
+# shift + alt - 6 : yabai -m window --space 6
+# shift + alt - 7 : yabai -m window --space 7
+# shift + alt - 8 : yabai -m window --space 8
+# shift + alt - 9 : yabai -m window --space 9
+# shift + alt - 0 : yabai -m window --space 10
 
 # resize
 ctrl + cmd - h : yabai -m window west --resize right:-20:0 2> /dev/null || yabai -m window --resize right:-20:0
@@ -75,5 +75,5 @@ ctrl + cmd - k : yabai -m window south --resize top:0:-20 2> /dev/null || yabai 
 ctrl + cmd - l : yabai -m window east --resize left:20:0 2> /dev/null || yabai -m window --resize left:20:0
 
 # move spaces
-alt - i : yabai -m space --move prev
-alt - o : yabai -m space --move next
+# alt - i : yabai -m space --move prev
+# alt - o : yabai -m space --move next
