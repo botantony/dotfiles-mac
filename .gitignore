@@ -4,3 +4,6 @@
 crontab/
 ghc/
 menus/
+
+# lazygit
+state.yml

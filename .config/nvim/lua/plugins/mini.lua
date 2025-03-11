@@ -22,6 +22,8 @@ return {
 		local statusline = require("mini.statusline")
 		-- set use_icons to true if you have a Nerd Font
 		statusline.setup({ use_icons = vim.g.have_nerd_font })
+		-- fix bad contrast in normal mode
+		vim.api.nvim_set_hl(0, "MiniStatuslineModeNormal", { fg = "#000000", bg = "#ffdd33", bold = true })
 
 		-- You can configure sections in the statusline by overriding their
 		-- default behavior. For example, here we set the section for
