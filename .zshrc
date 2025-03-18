@@ -129,6 +129,8 @@ alias fnvim='nvim $(fzf --preview="bat --color=always {}")'
 
 alias info='info --vi-keys'
 
+alias co-author='git show --pretty=format:"Co-authored-by: %an <%ae>"'
+
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -149,4 +151,4 @@ export PATH="$PATH:/${HOME}/.local/bin"
 export GPG_TTY=$(tty)
 
 export DOTNET_ROOT="$HOMEBREW_PREFIX/opt/dotnet/libexec"
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/Library/Homebrew/vendor/portable-ruby/3.3.7/bin:$PATH"
