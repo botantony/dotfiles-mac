@@ -128,6 +128,8 @@ function test-formula() {
   brew audit --strict --online --new $1
 }
 
+alias sort-autobump='sort -u .github/autobump.txt -o .github/autobump.txt'
+
 function vman() {
   nvim -c "Man $1 $2" -c 'silent only'
 }
@@ -135,6 +137,7 @@ function vman() {
 source <(fzf --zsh)
 
 alias fnvim='nvim $(fzf --preview="bat --color=always {}")'
+alias n='nvim'
 
 alias info='info --vi-keys'
 
