@@ -121,11 +121,11 @@ function y() {
 
 function test-formula() {
   echo -e "\e[1;31m==>\e[0m brew install $1"
-  HOMEBREW_NO_INSTALL_FROM_API=1 brew install --build-from-source --include-test --verbose $1
+  HOMEBREW_NO_INSTALL_FROM_API=1 brew install --build-from-source --include-test --verbose --formula $1
   echo -e "\e[1;31m==>\e[0m brew test $1"
-  brew test --verbose $1
+  brew test --verbose --formula $1
   echo -e "\e[1;31m==>\e[0m brew audit --new $1"
-  brew audit --strict --online --new $1
+  brew audit --strict --online --new --formula $1
 }
 
 alias sort-autobump='sort -u .github/autobump.txt -o .github/autobump.txt'

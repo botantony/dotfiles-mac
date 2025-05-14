@@ -3,6 +3,7 @@
 # automation
 crontab/
 ghc/
+cabal/
 menus/
 
 # lazygit
