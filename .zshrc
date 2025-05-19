@@ -164,3 +164,5 @@ export GPG_TTY=$(tty)
 
 export DOTNET_ROOT="$HOMEBREW_PREFIX/opt/dotnet/libexec"
 export PATH="/opt/homebrew/Library/Homebrew/vendor/portable-ruby/3.3.7/bin:$PATH"
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
