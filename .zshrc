@@ -106,9 +106,6 @@ set -o vi
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-alias reload="source ~/.zshrc"
-alias upd="brew upgrade && brew cleanup"
-
 # yazi
 function y() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -119,6 +116,9 @@ function y() {
   rm -f -- "$tmp"
 }
 
+source <(fzf --zsh)
+
+# useful aliases and functions
 function test-formula() {
   echo -e "\e[1;31m==>\e[0m brew install $1"
   HOMEBREW_NO_INSTALL_FROM_API=1 brew install --build-from-source --include-test --verbose --formula $1
@@ -127,30 +127,26 @@ function test-formula() {
   echo -e "\e[1;31m==>\e[0m brew audit --new $1"
   brew audit --strict --online --new --formula $1
 }
-
-alias sort-autobump='sort -u .github/autobump.txt -o .github/autobump.txt'
-
 function vman() {
   nvim -c "Man $1 $2" -c 'silent only'
 }
-
-source <(fzf --zsh)
-
+alias reload="source ~/.zshrc"
+alias upd="brew upgrade && brew cleanup"
+alias sort-autobump='sort -u .github/autobump.txt -o .github/autobump.txt'
 alias fnvim='nvim $(fzf --preview="bat --color=always {}")'
 alias n='nvim'
-
 alias info='info --vi-keys'
-
 alias co-author='git show --pretty=format:"Co-authored-by: %an <%ae>"'
+alias gen-c-tags="find . -name '*.[ch]' -print0 | xargs -0 ctags"
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export HOMEBREW_NO_ENV_HINTS=1
-export PATH="${HOMEBREW_PREFIX}/lib/ruby/gems/3.4.0/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/ruby/bin:$PATH"
 
 # Created by `pipx` on 2024-11-17 18:49:35
-export PATH="$PATH:/${HOME}/.local/bin"
+export PATH="$PATH:/$HOME/.local/bin"
 
 # BEGIN opam configuration
 # This is useful if you're using opam as it adds:

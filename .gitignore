@@ -8,3 +8,6 @@ menus/
 
 # lazygit
 state.yml
+
+# yazi plugins
+.config/yazi/plugins/*
