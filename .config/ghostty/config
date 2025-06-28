@@ -1,5 +1,6 @@
 theme = gruber-darker
 macos-titlebar-style = hidden
-font-family = "JetBrainsMono NFM Regular"
+font-family = "FiraCode Nerd Font Mono"
+# font-family = "JetBrainsMono NFM Regular"
 # font-family = "GohuFont 14 Nerd Font"
 font-size = 20

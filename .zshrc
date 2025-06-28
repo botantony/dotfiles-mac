@@ -127,6 +127,12 @@ function test-formula() {
   echo -e "\e[1;31m==>\e[0m brew audit --new $1"
   brew audit --strict --online --new --formula $1
 }
+function test-cask() {
+  echo -e "\e[1;31m==>\e[0m brew install $1"
+  HOMEBREW_NO_INSTALL_FROM_API=1 brew install --verbose --cask $1
+  echo -e "\e[1;31m==>\e[0m brew audit --new $1"
+  brew audit --strict --online --new --cask $1
+}
 function vman() {
   nvim -c "Man $1 $2" -c 'silent only'
 }
