@@ -1,0 +1,7 @@
+provider = "OpenMeteo"
+api_key = ""
+city = "Belgrade"
+units = "metric"
+showcityname = true
+use_colors = true
+compact = false
