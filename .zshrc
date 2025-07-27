@@ -138,9 +138,9 @@ function vman() {
 }
 alias reload="source ~/.zshrc"
 alias upd="brew upgrade && brew cleanup"
-alias sort-autobump='sort -u .github/autobump.txt -o .github/autobump.txt'
 alias fnvim='nvim $(fzf --preview="bat --color=always {}")'
 alias n='nvim'
+alias c="clear && clear"
 alias info='info --vi-keys'
 alias co-author='git show --pretty=format:"Co-authored-by: %an <%ae>"'
 alias gen-c-tags="find . -name '*.[ch]' -print0 | xargs -0 ctags"
