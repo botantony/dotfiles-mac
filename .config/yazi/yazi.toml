@@ -5,7 +5,7 @@ linemode = "size_and_mtime"
 
 [opener]
 edit = [
-	{ run = 'nvim "$@"', block = true, for = "unix" },
+	{ run = '$EDITOR "$@"', block = true, for = "unix" },
 ]
 play = [
 	{ run = 'open "$@"', orphan = true, for = 'macos' },

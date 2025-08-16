@@ -1,5 +1,5 @@
 return {
-	"sotte/presenting.nvim",
-	opts = {},
-	cmd = { "Presenting" },
+    "sotte/presenting.nvim",
+    opts = {},
+    cmd = { "Presenting" },
 }

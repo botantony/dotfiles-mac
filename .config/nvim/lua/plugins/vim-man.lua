@@ -1,3 +1,3 @@
 return {
-	"vim-utils/vim-man",
+    "vim-utils/vim-man",
 }

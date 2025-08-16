@@ -1,3 +1,3 @@
 return {
-	"leafo/moonscript-vim",
+    "leafo/moonscript-vim",
 }

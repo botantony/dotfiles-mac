@@ -1,3 +1,3 @@
 return {
-	"marekmaskarinec/vim-umka",
+    "marekmaskarinec/vim-umka",
 }
