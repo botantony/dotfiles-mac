@@ -15,8 +15,7 @@ vim.opt.relativenumber = true
 vim.opt.mouse = "a"
 
 -- ЙЦУКЕН
-vim.o.langmap =
-	"ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
+vim.o.langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
 
 -- Don't show the mode, since it's already in the status line
 -- vim.opt.showmode = false
@@ -26,7 +25,7 @@ vim.o.langmap =
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.schedule(function()
-	vim.opt.clipboard = "unnamedplus"
+    vim.opt.clipboard = "unnamedplus"
 end)
 
 -- Enable break indent
@@ -98,43 +97,43 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
 vim.api.nvim_create_autocmd("TextYankPost", {
-	desc = "Highlight when yanking (copying) text",
-	group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
-	callback = function()
-		vim.highlight.on_yank()
-	end,
+    desc = "Highlight when yanking (copying) text",
+    group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
+    callback = function()
+        vim.highlight.on_yank()
+    end,
 })
 
 -- Open a small terminal at the bottom
 vim.keymap.set("n", "<leader>ts", function()
-	vim.cmd.vnew()
-	vim.cmd.term()
-	vim.cmd.wincmd("J")
-	vim.api.nvim_win_set_height(0, 15)
+    vim.cmd.vnew()
+    vim.cmd.term()
+    vim.cmd.wincmd("J")
+    vim.api.nvim_win_set_height(0, 15)
 end)
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-	if vim.v.shell_error ~= 0 then
-		error("Error cloning lazy.nvim:\n" .. out)
-	end
+    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+    if vim.v.shell_error ~= 0 then
+        error("Error cloning lazy.nvim:\n" .. out)
+    end
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	"tpope/vim-sleuth",
-	{
-		"blazkowolf/gruber-darker.nvim",
-		priority = 1000,
-		init = function()
-			vim.cmd.colorscheme("gruber-darker")
-			vim.cmd.hi("Comment gui=none")
-		end,
-	},
-	{ import = "plugins" },
-	checker = { enabled = true },
+    "tpope/vim-sleuth",
+    {
+        "blazkowolf/gruber-darker.nvim",
+        priority = 1000,
+        init = function()
+            vim.cmd.colorscheme("gruber-darker")
+            vim.cmd.hi("Comment gui=none")
+        end,
+    },
+    { import = "plugins" },
+    checker = { enabled = true },
 })
