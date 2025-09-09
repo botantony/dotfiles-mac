@@ -14,3 +14,6 @@ state.yml
 
 # Stardew Valley saves
 .config/StardewValley
+
+# tmux plugins
+.tmux/plugins
