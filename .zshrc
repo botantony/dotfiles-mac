@@ -102,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 set -o vi
+set -o ignoreeof
 
 export EDITOR="nvim"
 export VISUAL="nvim"
