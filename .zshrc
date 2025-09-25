@@ -150,7 +150,6 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export HOMEBREW_NO_ENV_HINTS=1
-export PATH="$HOMEBREW_PREFIX/opt/ruby/bin:$PATH"
 
 # Created by `pipx` on 2024-11-17 18:49:35
 export PATH="$PATH:/$HOME/.local/bin"
@@ -166,6 +165,8 @@ export PATH="$PATH:/$HOME/.local/bin"
 export GPG_TTY=$(tty)
 
 export DOTNET_ROOT="$HOMEBREW_PREFIX/opt/dotnet/libexec"
-export PATH="/opt/homebrew/Library/Homebrew/vendor/portable-ruby/3.3.7/bin:$PATH"
 
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
+
+source ~/.secrets
+export PATH="$HOMEBREW_PREFIX/opt/ruby/bin:/opt/homebrew/opt/openjdk/bin:$HOME/opt/bin:$PATH"
