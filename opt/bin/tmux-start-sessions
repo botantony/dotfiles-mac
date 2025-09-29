@@ -2,15 +2,15 @@
 
 HOMEBREW_PATHS=(
     "${HOME}/Development/Personal/update-formulae"
-    "$(brew --prefix)/Library/Homebrew"
     "$(brew --repository homebrew/core)"
+    "$(brew --prefix)/Library/Homebrew"
     "$(brew --repository homebrew/cask)"
 )
 
 HOMEBREW_WINDOW_NAMES=(
     "update-formulae"
-    "Brew"
     "Core"
+    "Brew"
     "Cask"
 )
 
@@ -24,6 +24,8 @@ for i in {1..3}; do
 done
 
 tmux new-session -d -s Work -n main -c "${HOME}/Development/Work"
+tmux new-window -t Work -n docker/compose -c "${HOME}/Development/Work"
+tmux new-window -t Work -n docker/exec -c "${HOME}/Development/Work"
 
 tmux new-session -d -s Studying -n main -c "${HOME}/Studying"
 
