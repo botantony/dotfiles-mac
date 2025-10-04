@@ -170,8 +170,3 @@ fpath+=~/.zfunc; autoload -Uz compinit; compinit
 
 source ~/.secrets
 export PATH="$HOMEBREW_PREFIX/opt/ruby/bin:/opt/homebrew/opt/openjdk/bin:$HOME/opt/bin:$PATH"
-
-HOMEBREW_COMMAND_NOT_FOUND_HANDLER="$(brew --repository)/Library/Homebrew/command-not-found/handler.sh"
-if [ -f "$HOMEBREW_COMMAND_NOT_FOUND_HANDLER" ]; then
-  source "$HOMEBREW_COMMAND_NOT_FOUND_HANDLER";
-fi

@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-set -euo pipefail
-
-mapfile -t BUMP_REVISION_FORMULAE < <(brew uses --eval-all "$1" | cut -d' ' -f1)
-
-for formula in "${BUMP_REVISION_FORMULAE[@]}"; do
-    brew bump-revision --message "($1 $2)" "${formula}"
-done
