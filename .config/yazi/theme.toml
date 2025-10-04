@@ -1,33 +1,35 @@
 # vim:fileencoding=utf-8:foldmethod=marker
+# Theme: https://github.com/poperigby/gruvbox-dark-yazi
 
 # : Manager {{{
 
 [mgr]
-cwd = { fg = "#ffdd33" }
+cwd = { fg = "#83a598" }
 
 # Hovered
-hovered         = { fg = "#181818", bg = "#ffdd33" }
+hovered         = { fg = "#282828", bg = "#83a598" }
 preview_hovered = { underline = true }
 
 # Find
-find_keyword  = { fg = "#73d936", italic = true }
-find_position = { fg = "#ffdd33", bg = "reset", italic = true }
+find_keyword  = { fg = "#b8bb26", italic = true }
+find_position = { fg = "#fe8019", bg = "reset", italic = true }
 
 # Marker
-marker_selected = { fg = "#73d936", bg = "#73d936" }
-marker_copied   = { fg = "#73d936", bg = "#73d936" }
-marker_cut      = { fg = "#f43841", bg = "#f43841" }
+marker_selected = { fg = "#b8bb26", bg = "#b8bb26" }
+marker_copied   = { fg = "#b8bb26", bg = "#b8bb26" }
+marker_cut      = { fg = "#fb4934", bg = "#fb4934" }
 
 # Tab
-tab_active   = { fg = "#181818", bg = "#52494e" }
-tab_inactive = { fg = "#e4e4e4", bg = "#453d41" }
+tab_active   = { fg = "#282828", bg = "#504945" }
+tab_inactive = { fg = "#a89984", bg = "#3c3836" }
 tab_width    = 1
 
 # Border
 border_symbol = "│"
-border_style  = { fg = "#565f73" }
+border_style  = { fg = "#665c54" }
 
 # Highlighting
+# syntect_theme = "~/.config/yazi/Gruvbox-Dark.tmTheme"
 
 # : }}}
 
@@ -37,20 +39,20 @@ border_style  = { fg = "#565f73" }
 [status]
 separator_open  = ""
 separator_close = ""
-separator_style = { fg = "#453d41", bg = "#453d41" }
+separator_style = { fg = "#3c3836", bg = "#3c3836" }
 
 
 # Progress
-progress_label  = { fg = "#f5f5f5", bold = true }
-progress_normal = { fg = "#52494e", bg = "#453d41" }
-progress_error  = { fg = "#f43841", bg = "#453d41" }
+progress_label  = { fg = "#ebdbb2", bold = true }
+progress_normal = { fg = "#504945", bg = "#3c3836" }
+progress_error  = { fg = "#fb4934", bg = "#3c3836" }
 
 # Permissions
-permissions_t = { fg = "#52494e" }
-permissions_r = { fg = "#73d936" }
-permissions_w = { fg = "#f43841" }
-permissions_x = { fg = "#73d936" }
-permissions_s = { fg = "#565f73" }
+permissions_t = { fg = "#504945" }
+permissions_r = { fg = "#b8bb26" }
+permissions_w = { fg = "#fb4934" }
+permissions_x = { fg = "#b8bb26" }
+permissions_s = { fg = "#665c54" }
 
 # : }}}
 
@@ -58,14 +60,14 @@ permissions_s = { fg = "#565f73" }
 # : mode {{{
 
 [mode]
-normal_main = { fg = "#181818", bg = "#e4e4e4", bold = true }
-normal_alt = { fg = "#181818", bg = "#e4e4e4", bold = true }
+normal_main = { fg = "#282828", bg = "#A89984", bold = true }
+normal_alt = { fg = "#282828", bg = "#A89984", bold = true }
 
-select_main = { fg = "#181818", bg = "#73d936", bold = true }
-select_alt = { fg = "#181818", bg = "#73d936", bold = true }
+select_main = { fg = "#282828", bg = "#b8bb26", bold = true }
+select_alt = { fg = "#282828", bg = "#b8bb26", bold = true }
 
-unset_main  = { fg = "#181818", bg = "#9e95c7", bold = true }
-unset_alt  = { fg = "#181818", bg = "#9e95c7", bold = true }
+unset_main  = { fg = "#282828", bg = "#d3869b", bold = true }
+unset_alt  = { fg = "#282828", bg = "#d3869b", bold = true }
 
 # : }}}
 
@@ -73,7 +75,7 @@ unset_alt  = { fg = "#181818", bg = "#9e95c7", bold = true }
 # : Input {{{
 
 [input]
-border   = { fg = "#95a99f" }
+border   = { fg = "#bdae93" }
 title    = {}
 value    = {}
 selected = { reversed = true }
@@ -84,8 +86,8 @@ selected = { reversed = true }
 # : Select {{{
 
 [select]
-border   = { fg = "#52494e" }
-active   = { fg = "#ffdd33" }
+border   = { fg = "#504945" }
+active   = { fg = "#fe8019" }
 inactive = {}
 
 # : }}}
@@ -94,7 +96,7 @@ inactive = {}
 # : Tasks {{{
 
 [tasks]
-border  = { fg = "#52494e" }
+border  = { fg = "#504945" }
 title   = {}
 hovered = { underline = true }
 
@@ -104,12 +106,12 @@ hovered = { underline = true }
 # : Which {{{
 
 [which]
-mask            = { bg = "#453d41" }
-cand            = { fg = "#ffdd33" }
-rest            = { fg = "#565f73" }
-desc            = { fg = "#ffdd33" }
+mask            = { bg = "#3c3836" }
+cand            = { fg = "#83a598" }
+rest            = { fg = "#928374" }
+desc            = { fg = "#fe8019" }
 separator       = "  "
-separator_style = { fg = "#52494e" }
+separator_style = { fg = "#504945" }
 
 # : }}}
 
@@ -117,11 +119,11 @@ separator_style = { fg = "#52494e" }
 # : Help {{{
 
 [help]
-on      = { fg = "#ffdd33" }
-exec    = { fg = "#ffdd33" }
-desc    = { fg = "#565f73" }
-hovered = { bg = "#52494e", bold = true }
-footer  = { fg = "#453d41", bg = "#e4e4e4" }
+on      = { fg = "#fe8019" }
+exec    = { fg = "#83a598" }
+desc    = { fg = "#928374" }
+hovered = { bg = "#504945", bold = true }
+footer  = { fg = "#3c3836", bg = "#a89984" }
 
 # : }}}
 
@@ -132,24 +134,24 @@ footer  = { fg = "#453d41", bg = "#e4e4e4" }
 
 rules = [
     # Images
-    { mime = "image/*", fg = "#ffdd33" },
+    { mime = "image/*", fg = "#83a598" },
 
     # Videos
-    { mime = "video/*", fg = "#73d936" },
-    { mime = "audio/*", fg = "#73d936" },
+    { mime = "video/*", fg = "#b8bb26" },
+    { mime = "audio/*", fg = "#b8bb26" },
 
     # Archives
-    { mime = "application/zip",             fg = "#ffdd33" },
-    { mime = "application/gzip",            fg = "#ffdd33" },
-    { mime = "application/x-tar",           fg = "#ffdd33" },
-    { mime = "application/x-bzip",          fg = "#ffdd33" },
-    { mime = "application/x-bzip2",         fg = "#ffdd33" },
-    { mime = "application/x-7z-compressed", fg = "#ffdd33" },
-    { mime = "application/x-rar",           fg = "#ffdd33" },
+    { mime = "application/zip",             fg = "#fe8019" },
+    { mime = "application/gzip",            fg = "#fe8019" },
+    { mime = "application/x-tar",           fg = "#fe8019" },
+    { mime = "application/x-bzip",          fg = "#fe8019" },
+    { mime = "application/x-bzip2",         fg = "#fe8019" },
+    { mime = "application/x-7z-compressed", fg = "#fe8019" },
+    { mime = "application/x-rar",           fg = "#fe8019" },
 
     # Fallback
-    { name = "*", fg = "#e4e4e4" },
-    { name = "*/", fg = "#ffdd33" }
+    { name = "*", fg = "#a89984" },
+    { name = "*/", fg = "#83a598" }
 ]
 
 # : }}}

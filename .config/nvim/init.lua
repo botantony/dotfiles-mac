@@ -127,10 +127,11 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     "tpope/vim-sleuth",
     {
-        "blazkowolf/gruber-darker.nvim",
+        -- "blazkowolf/gruber-darker.nvim",
+        "morhetz/gruvbox",
         priority = 1000,
         init = function()
-            vim.cmd.colorscheme("gruber-darker")
+            vim.cmd.colorscheme("gruvbox")
             vim.cmd.hi("Comment gui=none")
         end,
     },
