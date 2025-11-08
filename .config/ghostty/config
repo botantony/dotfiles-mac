@@ -1,6 +1,7 @@
-theme = gruber-darker
+theme = Gruber Darker
 # macos-titlebar-style = hidden
-font-family = "FiraCode Nerd Font Mono"
-# font-family = "JetBrainsMono NFM Regular"
+# font-family = "FiraCode Nerd Font Mono"
 # font-family = "GohuFont 14 Nerd Font"
+font-family = "JetBrainsMono NFM Regular"
 font-size = 20
+# custom-shader = shaders/cursor_tail.glsl

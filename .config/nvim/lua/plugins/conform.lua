@@ -33,9 +33,7 @@ return { -- Autoformat
         end,
         formatters_by_ft = {
             lua = { "stylua" },
-            -- python = { "isort", "black" },
-            --
-            -- javascript = { "prettierd", "prettier", stop_after_first = true },
+            haskell = { "stylish-haskell" },
         },
     },
 }

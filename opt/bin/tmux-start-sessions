@@ -23,7 +23,7 @@ for i in {1..3}; do
   tmux new-window -t Homebrew -n "${HOMEBREW_WINDOW_NAMES[$i]}" -c "${HOMEBREW_PATHS[$i]}"
 done
 
-tmux new-session -d -s Work -n main -c "${HOME}/Development/Work"
+tmux new-session -d -s Work -n main -c "${HOME}/Development/Work/${JOB_DIR}"
 tmux new-window -t Work -n docker/compose -c "${HOME}/Development/Work"
 tmux new-window -t Work -n docker/exec -c "${HOME}/Development/Work"
 

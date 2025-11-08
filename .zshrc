@@ -74,6 +74,7 @@ zstyle ':omz:update' frequency 7
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+unalias -m '*'
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -138,7 +139,7 @@ function vman() {
   nvim -c "Man $1 $2" -c 'silent only'
 }
 alias reload="source ~/.zshrc"
-alias upd="brew upgrade && brew cleanup"
+alias upd="brew update && brew upgrade"
 alias fnvim='nvim $(fzf --preview="bat --color=always {}")'
 alias n='nvim'
 alias c="clear && clear"
@@ -150,6 +151,8 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export HOMEBREW_NO_ENV_HINTS=1
+export HOMEBREW_NO_INSTALL_FROM_API=1
+export HOMEBREW_DOWNLOAD_CONCURRENCY=0
 
 # Created by `pipx` on 2024-11-17 18:49:35
 export PATH="$PATH:/$HOME/.local/bin"

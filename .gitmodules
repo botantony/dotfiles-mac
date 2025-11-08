@@ -1,0 +1,6 @@
+[submodule ".config/emacs"]
+	path = .config/emacs
+	url = https://github.com/doomemacs/doomemacs.git
+[submodule ".config/ghostty/shaders"]
+	path = .config/ghostty/shaders
+	url = https://github.com/sahaj-b/ghostty-cursor-shaders

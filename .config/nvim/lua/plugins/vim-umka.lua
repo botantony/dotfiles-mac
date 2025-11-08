@@ -1,3 +1,0 @@
-return {
-    "marekmaskarinec/vim-umka",
-}
