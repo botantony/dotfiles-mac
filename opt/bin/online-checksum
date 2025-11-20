@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ "$#" -eq 0 ]; then
+    echo "usage: $0 <url> [url ...]" >&2
+    exit 1
+fi
+
+for url in "$@"; do
+    tmpfile="$(mktemp)"
+    echo "Downloading: $url"
+    curl -L --fail "$url" -o "$tmpfile"
+    echo -n "SHA256: "
+    sha256sum "$tmpfile" | awk '{print $1}'
+    rm -f "$tmpfile"
+done

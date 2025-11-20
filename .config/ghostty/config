@@ -5,3 +5,4 @@ theme = Gruber Darker
 font-family = "JetBrainsMono NFM Regular"
 font-size = 20
 # custom-shader = shaders/cursor_tail.glsl
+shell-integration-features = ssh-env,ssh-terminfo

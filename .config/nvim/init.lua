@@ -15,7 +15,8 @@ vim.opt.relativenumber = true
 vim.opt.mouse = "a"
 
 -- ЙЦУКЕН
-vim.o.langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
+vim.o.langmap =
+    "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
 
 -- Don't show the mode, since it's already in the status line
 -- vim.opt.showmode = false
@@ -66,6 +67,10 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+-- Spellcheck
+vim.opt.spell = true
+vim.opt.spelllang = { "en_us", "ru_yo" }
 
 -- [[ Basic Keymap ]]
 -- Clear highlights on search when pressing <Esc> in normal mode

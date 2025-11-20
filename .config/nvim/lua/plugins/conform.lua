@@ -1,4 +1,16 @@
 -- Autoformat
+
+local formatters = {
+    lua = { "stylua" },
+    haskell = { "stylish-haskell" },
+    haskell = { "gofmt" },
+    python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
+}
+
+for _, v in ipairs({ "javascript", "css", "html", "json", "yaml" }) do
+    formatters[v] = { "prettier" }
+end
+
 return { -- Autoformat
     "stevearc/conform.nvim",
     event = { "BufWritePre" },
@@ -31,9 +43,6 @@ return { -- Autoformat
                 lsp_format = lsp_format_opt,
             }
         end,
-        formatters_by_ft = {
-            lua = { "stylua" },
-            haskell = { "stylish-haskell" },
-        },
+        formatters_by_ft = formatters,
     },
 }
