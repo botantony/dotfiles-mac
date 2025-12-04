@@ -1,0 +1,1 @@
+[:vim-utils/vim-man]

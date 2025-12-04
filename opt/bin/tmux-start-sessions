@@ -19,8 +19,10 @@ tmux kill-server
 tmux new-session -d -s Personal -n main
 
 tmux new-session -d -s Homebrew -n "${HOMEBREW_WINDOW_NAMES[0]}" -c "${HOMEBREW_PATHS[0]}"
-for i in {1..3}; do
-  tmux new-window -t Homebrew -n "${HOMEBREW_WINDOW_NAMES[$i]}" -c "${HOMEBREW_PATHS[$i]}"
+HOMEBREW_ARRAY_LEN="${#HOMEBREW_WINDOW_NAMES[@]}"
+
+for i in $(seq 1 $HOMEBREW_ARRAY_LEN); do
+    tmux new-window -t Homebrew -n "${HOMEBREW_WINDOW_NAMES[$i]:-empty}" -c "${HOMEBREW_PATHS[$i]}"
 done
 
 tmux new-session -d -s Work -n main -c "${HOME}/Development/Work/${JOB_DIR}"
