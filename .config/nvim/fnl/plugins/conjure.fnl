@@ -1,5 +1,5 @@
 [{1 :Olical/conjure
-  :ft [:fennel :python :javascript]
+  :ft [:fennel :python :javascript :lua]
   ;; etc
   :lazy true
   :dependencies [:PaterJason/cmp-conjure]}

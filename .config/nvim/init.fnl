@@ -5,7 +5,7 @@
   (tset vim.o field val))
 
 (lambda set-g [field val]
-  (tset vim.g :field val))
+  (tset vim.g field val))
 
 (lambda set-keymap [...]
   (vim.keymap.set ...))
