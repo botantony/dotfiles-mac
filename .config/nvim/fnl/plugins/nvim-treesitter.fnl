@@ -19,6 +19,7 @@
                            :ruby
                            :rust
                            :scheme
+                           :sql
                            :swift
                            :typescript
                            :vim

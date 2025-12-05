@@ -1,1 +1,0 @@
-[:godlygeek/tabular]

@@ -1,14 +1,20 @@
-(lambda set-opt [field val]
-  (tset vim.opt field val))
+(macro set-opt [field val]
+  `(tset vim.opt ,field ,val))
 
-(lambda set-o [field val]
-  (tset vim.o field val))
+(macro set-o [field val]
+  `(tset vim.o ,field ,val))
 
-(lambda set-g [field val]
-  (tset vim.g field val))
+(macro set-g [field val]
+  `(tset vim.g ,field ,val))
 
-(lambda set-keymap [...]
-  (vim.keymap.set ...))
+(macro set-keymap [...]
+  `(vim.keymap.set ,...))
+
+(macro table-concat* [xs_ sep_]
+  (let [xs xs_
+        sep sep_
+        out (table.concat xs sep)]
+    `,out))
 
 ;; Clipboard
 (vim.schedule #(set-opt :clipboard :unnamedplus))
@@ -30,9 +36,9 @@
 (set-opt :mouse :a)
 
 ;; ЙЦУКЕН
-(set-o :langmap (table.concat ["ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                               "фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"]
-                              ","))
+(set-o :langmap (table-concat* ["ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                "фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"]
+                               ","))
 
 ;; Don't show the mode, since it's already in the status line
 ;; (set-opt :showmode false)
@@ -111,12 +117,26 @@
                                                                   {:clear true})
                               :callback #(vim.highlight.on_yank)})
 
+(local theme-options
+       [{1 :blazkowolf/gruber-darker.nvim
+         :priority 1000
+         :init #(do
+                  (vim.cmd.colorscheme :gruber-darker)
+                  (vim.cmd.hi "Comment gui=none"))}])
+
+(local one-line-plugins [theme-options
+                         :tpope/vim-sleuth
+                         :leafo/moonscript-vim
+                         :tjdevries/present.nvim
+                         :godlygeek/tabular
+                         :tpope/vim-abolish
+                         :vim-utils/vim-man])
+
+(local lazy-setup (let [out one-line-plugins]
+                    ;; `plugins` directory
+                    (table.insert out {:import :plugins})
+                    (tset out :checker {:enabled true})
+                    out))
+
 (let [lazy (require :lazy)]
-  (lazy.setup {1 :tpope/vim-sleuth
-               2 {1 :blazkowolf/gruber-darker.nvim
-                  :priority 1000
-                  :init #(do
-                           (vim.cmd.colorscheme :gruber-darker)
-                           (vim.cmd.hi "Comment gui=none"))}
-               3 {:import :plugins}
-               :checker {:enabled true}}))
+  (lazy.setup lazy-setup))
