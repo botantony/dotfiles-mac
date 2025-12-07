@@ -12,7 +12,7 @@
       (tset out v [:prettier]))
     `,out))
 
-(macro list->map [xs]
+(macro list->set [xs]
   (var out [])
   (each [_ v (ipairs xs)]
     (tset out v true))
@@ -30,9 +30,9 @@
          :mode ""
          :desc "[F]ormat buffer"}]
  :opts {:notify_on_error false
-        :format_on_save #(let [disable-filetypes (list->map [:c :cpp])
+        :format_on_save #(let [disable-filetypes (list->set [:c :cpp])
                                lsp-format-opt (if (. disable-filetypes
-                                                     (. (. vim.bo $1) :filetype))
+                                                     (. vim.bo $1 :filetype))
                                                   :never
                                                   :fallback)]
                            {:timeout_ms 500 :lsp_format lsp-format-opt})

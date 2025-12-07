@@ -91,12 +91,18 @@
 ;;  See `:help hlsearch`
 (set-keymap :n :<Esc> :<cmd>nohlsearch<CR>)
 
-;; go to the beginning/end
-(set-keymap :n :L "$" {:noremap true})
-(set-keymap :n :H "^" {:noremap true})
-;; cyrillic
-(set-keymap :n "Д" "$" {:noremap true})
-(set-keymap :n "Р" "^" {:noremap true})
+(each [_ mode (ipairs [:n :v])]
+  (set-keymap mode :L "$" {:noremap true})
+  (set-keymap mode :H "^" {:noremap true})
+  (set-keymap mode "Д" "$" {:noremap true})
+  (set-keymap mode "Р" "^" {:noremap true})
+  (set-keymap mode :<leader>d "\"_d"))
+
+(set-keymap :x :<leader>p "\"_dP")
+
+;; Move blocks of code in visual mode
+(set-keymap :v :J ":m '>+1<CR>gv=gv")
+(set-keymap :v :K ":m '<-2<CR>gv=gv")
 
 ;; Diagnostic keymaps
 (set-keymap :n :<leader>q vim.diagnostic.setloclist
