@@ -29,11 +29,4 @@
               (conform.format {:async true :lsp_format :fallback}))
          :mode ""
          :desc "[F]ormat buffer"}]
- :opts {:notify_on_error false
-        :format_on_save #(let [disable-filetypes (list->set [:c :cpp])
-                               lsp-format-opt (if (. disable-filetypes
-                                                     (. vim.bo $1 :filetype))
-                                                  :never
-                                                  :fallback)]
-                           {:timeout_ms 500 :lsp_format lsp-format-opt})
-        :formatters_by_ft (formatters)}}
+ :opts {:notify_on_error false :formatters_by_ft (formatters)}}

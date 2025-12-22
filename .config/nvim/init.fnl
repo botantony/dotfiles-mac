@@ -146,3 +146,10 @@
 
 (let [lazy (require :lazy)]
   (lazy.setup lazy-setup))
+
+;; Transparent background
+(vim.cmd (table-concat* ["highlight Normal guibg=none"
+                         "highlight NonText guibg=none"
+                         "highlight Normal ctermbg=none"
+                         "highlight NonText ctermbg=none"]
+                        "\n"))

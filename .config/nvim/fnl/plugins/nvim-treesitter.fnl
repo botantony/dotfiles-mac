@@ -7,6 +7,7 @@
                          :cpp
                          :dhall
                          :diff
+                         :dockerfile
                          :doxygen
                          :elm
                          :elixir
@@ -15,6 +16,7 @@
                          :gitcommit
                          :gitignore
                          :go
+                         :graphql
                          :haskell
                          :hjson
                          :html
