@@ -3,5 +3,7 @@ use = "yazi-rs/plugins:chmod"
 rev = "3d1efb7"
 hash = "a030fe48d91b04341ad2fba9be957df"
 
-[flavor]
-deps = []
+[[flavor.deps]]
+use = "bennyyip/gruvbox-dark"
+rev = "2c61c90"
+hash = "3685f7557e7425381b65c883c688f593"

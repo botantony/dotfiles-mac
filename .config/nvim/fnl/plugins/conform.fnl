@@ -4,6 +4,7 @@
   (let [out {:fennel [:fnlfmt]
              :go [:gofmt]
              :haskell [:stylish-haskell]
+             ;; :haskell [:hindent]
              :lua [:stylua]
              :python [:ruff_fix :ruff_format :ruff_organize_imports]
              :rust [:rustfmt]}
