@@ -7,3 +7,8 @@ hash = "a030fe48d91b04341ad2fba9be957df"
 use = "bennyyip/gruvbox-dark"
 rev = "2c61c90"
 hash = "3685f7557e7425381b65c883c688f593"
+
+[[flavor.deps]]
+use = "kmlupreti/ayu-dark"
+rev = "648a178"
+hash = "97124aae31cd2a5cae41c93f804996a5"
