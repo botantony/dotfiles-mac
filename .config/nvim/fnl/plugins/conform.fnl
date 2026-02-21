@@ -1,7 +1,8 @@
 ;; Autoformat
 
 (macro formatters []
-  (let [out {:fennel [:fnlfmt]
+  (let [out {:clojure [:cljstyle]
+             :fennel [:fnlfmt]
              :go [:gofmt]
              :haskell [:hindent :stylish-haskell]
              :lua [:stylua]
