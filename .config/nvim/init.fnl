@@ -104,6 +104,15 @@
 (set-keymap :v :J ":m '>+1<CR>gv=gv")
 (set-keymap :v :K ":m '<-2<CR>gv=gv")
 
+;; Autocomplete braces
+(each [opening closing (pairs {"(" ")"
+                               "{" "}"
+                               "[" "]"
+                               "\"" "\""
+                               "'" "'"
+                               "`" "`"})]
+  (set-keymap :i opening (.. opening closing :<Esc>ha)))
+
 ;; Diagnostic keymaps
 (set-keymap :n :<leader>q vim.diagnostic.setloclist
             {:desc "Open diagnostic [Q]uickfix list"})
