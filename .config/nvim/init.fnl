@@ -111,7 +111,15 @@
                                "\"" "\""
                                "'" "'"
                                "`" "`"})]
-  (set-keymap :i opening (.. opening closing :<Esc>ha)))
+  (set-keymap :i opening (.. opening closing :<Left>)))
+
+;; Special case: `<>` only for generics
+(let [insert-angle-bracket #(let [(row col) (unpack (vim.api.nvim_win_get_cursor 0))
+                                  line (vim.api.nvim_get_current_line)
+                                  prev-char (if (= col 0) "-"
+                                                (line:sub col col))]
+                              (if (prev-char:match "%w") :<><Left> "<"))]
+  (set-keymap :i "<" insert-angle-bracket {:expr true}))
 
 ;; Diagnostic keymaps
 (set-keymap :n :<leader>q vim.diagnostic.setloclist
