@@ -133,6 +133,16 @@
 ;; or just use <C-\><C-n> to exit terminal mode
 (set-keymap :t :<Esc><Esc> "<C-\\><C-n>" {:desc "Exit terminal mode"})
 
+;; Keymaps for compiler plugin
+(set-keymap :n :<leader>cc :<cmd>Compile<CR>
+            {:desc "[C]ompiler mode - [c]ompile"})
+(set-keymap :n :<leader>cr :<cmd>Recompile<CR>
+            {:desc "[C]ompiler mode - [r]ecpompile"})
+(set-keymap :n :<leader>cn :<cmd>NextError<CR>
+            {:desc "[C]ompiler mode - [n]next"})
+(set-keymap :n :<leader>cp :<cmd>PrevError<CR>
+            {:desc "[C]ompiler mode - [p]revious"})
+
 ;; Highlight when yanking (copying) text
 (vim.api.nvim_create_autocmd :TextYankPost
                              {:desc "Highlight when yanking (copying) text"
