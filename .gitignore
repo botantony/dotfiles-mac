@@ -15,5 +15,8 @@ state.yml
 # Stardew Valley saves
 .config/StardewValley
 
+# btop config
+.config/btop/btop.conf
+
 # tmux plugins
 .tmux/plugins

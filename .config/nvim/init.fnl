@@ -136,12 +136,21 @@
 ;; Keymaps for compiler plugin
 (set-keymap :n :<leader>cc :<cmd>Compile<CR>
             {:desc "[C]ompiler mode - [c]ompile"})
+
 (set-keymap :n :<leader>cr :<cmd>Recompile<CR>
             {:desc "[C]ompiler mode - [r]ecpompile"})
+
 (set-keymap :n :<leader>cn :<cmd>NextError<CR>
             {:desc "[C]ompiler mode - [n]next"})
+
 (set-keymap :n :<leader>cp :<cmd>PrevError<CR>
             {:desc "[C]ompiler mode - [p]revious"})
+
+;; Run simple commands
+(set-keymap :n :<leader>rs :<cmd>Run<CR> {:desc "[R]un and print [s]tdout"})
+(set-keymap :n :<leader>re :<cmd>RunErr<CR> {:desc "[R]un and print std[e]rr"})
+(set-keymap :n :<leader>ra :<cmd>RunAll<CR>
+            {:desc "[R]un and print [a]ll standard streams"})
 
 ;; Highlight when yanking (copying) text
 (vim.api.nvim_create_autocmd :TextYankPost

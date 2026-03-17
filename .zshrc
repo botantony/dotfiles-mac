@@ -98,7 +98,15 @@ export DOTNET_ROOT="$HOMEBREW_PREFIX/opt/dotnet/libexec"
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
 
 source ~/.secrets
-export PATH="$HOMEBREW_PREFIX/opt/ruby/bin:$HOMEBREW_PREFIX/lib/ruby/gems/4.0.0/bin:/opt/homebrew/opt/openjdk/bin:$HOME/opt/bin:$PATH"
+PATH="$HOMEBREW_PREFIX/lib/ruby/gems/4.0.0/bin:$HOME/opt/bin:$PATH"
+
+keg_only_tools=("openjdk" "ffmpeg-full" "imagemagick-full" "rustup" "ruby")
+
+for dirname in "${keg_only_tools[@]}"; do
+  path=("$HOMEBREW_PREFIX/opt/$dirname/bin" $path)
+done
+
+export PATH
 
 HOMEBREW_COMMAND_NOT_FOUND_HANDLER="$(brew --repository)/Library/Homebrew/command-not-found/handler.sh"
 if [ -f "$HOMEBREW_COMMAND_NOT_FOUND_HANDLER" ]; then
