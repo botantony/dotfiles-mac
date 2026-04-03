@@ -23,6 +23,7 @@
                          :java
                          :javascript
                          :json
+                         :kotlin
                          :latex
                          :lua
                          :luadoc
@@ -33,6 +34,7 @@
                          :meson
                          :ninja
                          :ocaml
+                         :perl
                          :python
                          :query
                          :ruby
@@ -40,18 +42,20 @@
                          :scheme
                          :sql
                          :swift
+                         :systemverilog
                          :toml
                          :typescript
-                         :verilog
                          :vim
                          :vimdoc
                          :xml
                          :yaml])
 
 {1 :nvim-treesitter/nvim-treesitter
+ :branch :main
+ :lazy false
  :build ":TSUpdate"
- :main :nvim-treesitter.configs
- :opts {:ensure_installed ensure-installed
-        :auto_install true
-        :highlight {:enable true :additional_vim_regex_highlighting [:ruby]}
-        :indent {:enable true :disable [:ruby]}}}
+ :config #(let [ts (require :nvim-treesitter)]
+            (ts.install ensure-installed)
+            (vim.api.nvim_create_autocmd :FileType
+                                         {:pattern ensure-installed
+                                          :callback #(vim.treesitter.start)}))}

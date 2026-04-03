@@ -7,10 +7,10 @@
                                              :col 3}}
                  :default_command {:rust "cargo build"
                                    :haskell "cabal build"
-                                   :python "pyhton3 %"
-                                   :ruby "ruby %"
-                                   :lua "lua %"
-                                   :javascript "node %"
-                                   :typescript "node %"
-                                   :c "cc -o %:r %"
-                                   :go "go build %"}})}
+                                   :python "python3"
+                                   :ruby "ruby"
+                                   :lua "lua"
+                                   :javascript "node"
+                                   :typescript "node"
+                                   :c "cc"
+                                   :go "go build"}})}
