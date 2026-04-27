@@ -27,7 +27,7 @@
     "scroll_step": 100.0
   },
   "StatusBar": {
-    "enabled": true,
+    "enabled": false,
     "style": {
       "bg": { "rgb": [216, 74, 74] },
       "fg": { "rgb": [255, 255, 255] }

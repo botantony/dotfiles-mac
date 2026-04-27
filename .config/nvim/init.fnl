@@ -142,21 +142,27 @@
                                                                   {:clear true})
                               :callback #(vim.highlight.on_yank)})
 
-(local theme-options
-       [{1 :blazkowolf/gruber-darker.nvim
-         :priority 1000
-         :init #(do
-                  (vim.cmd.colorscheme :gruber-darker)
-                  (vim.cmd.hi "Comment gui=none"))}])
+;; Gruber Darker
+;; (local theme-options {:url "https://github.com/blazkowolf/gruber-darker.nvim"
+;;                       :colorscheme :gruber-darker})
 
-(local no-config-plugins [theme-options
-                         :tpope/vim-sleuth
-                         :leafo/moonscript-vim
-                         :tjdevries/present.nvim
-                         :godlygeek/tabular
-                         :tpope/vim-abolish
-                         :jiangmiao/auto-pairs
-                         :vim-utils/vim-man])
+(local theme-options {:url "https://git.sr.ht/~p00f/alabaster.nvim"
+                      :colorscheme :alabaster})
+
+(local no-config-plugins [{:url (. theme-options :url)
+                           :priority 1000
+                           :init #(do
+                                    (vim.cmd.colorscheme (. theme-options
+                                                            :colorscheme))
+                                    (vim.cmd.hi "Comment gui=none"))}
+                          :tpope/vim-sleuth
+                          :leafo/moonscript-vim
+                          :tjdevries/present.nvim
+                          :godlygeek/tabular
+                          :tpope/vim-abolish
+                          :jiangmiao/auto-pairs
+                          :blazkowolf/gruber-darker.nvim
+                          :vim-utils/vim-man])
 
 (local lazy-setup (let [out no-config-plugins]
                     ;; `plugins` directory

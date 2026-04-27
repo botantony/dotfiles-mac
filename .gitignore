@@ -18,5 +18,8 @@ state.yml
 # btop config
 .config/btop/btop.conf
 
+# weechat
+.config/weechat/*
+
 # tmux plugins
 .tmux/plugins

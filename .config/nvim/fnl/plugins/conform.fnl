@@ -1,7 +1,7 @@
 ;; Autoformat
 
 (macro formatters []
-  (let [out {:clojure [:cljstyle]
+  (let [out {:clojure [:cljfmt]
              :fennel [:fnlfmt]
              :go [:gofmt]
              :haskell [:hindent :stylish-haskell]

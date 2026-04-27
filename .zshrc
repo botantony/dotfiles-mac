@@ -1,33 +1,4 @@
-export ZSH="$HOME/.oh-my-zsh"
-
-# ZSH_THEME="minimal"
-# ZSH_THEME="refined"
-ZSH_THEME="awesomepanda"
-
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-zstyle ':omz:update' frequency 7
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-
-# Unalias OMZ's bs
-unalias -m '*'
+PROMPT="%1~ λ "
 
 set -o vi
 set -o ignoreeof
@@ -75,10 +46,13 @@ alias co-author='git show --pretty=format:"Co-authored-by: %an <%ae>"'
 alias gen-c-tags="find . -name '*.[ch]' -print0 | xargs -0 ctags"
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export HOMEBREW_NO_ENV_HINTS=1
 export HOMEBREW_NO_INSTALL_FROM_API=1
+export HOMEBREW_DEVELOPER=1
+
+# Experimental Rust frontend
+export HOMEBREW_EXPERIMENTAL_RUST_FRONTEND=1
 
 # Created by `pipx` on 2024-11-17 18:49:35
 export PATH="$PATH:/$HOME/.local/bin"
@@ -112,3 +86,5 @@ HOMEBREW_COMMAND_NOT_FOUND_HANDLER="$(brew --repository)/Library/Homebrew/comman
 if [ -f "$HOMEBREW_COMMAND_NOT_FOUND_HANDLER" ]; then
   source "$HOMEBREW_COMMAND_NOT_FOUND_HANDLER";
 fi
+
+export LLAMA_METAL=1
