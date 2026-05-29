@@ -37,7 +37,7 @@ function vman() {
   nvim -c "Man $1 $2" -c 'silent only'
 }
 alias reload="source ~/.zshrc"
-alias upd="brew update && brew upgrade"
+alias upd="brew update && brew upgrade --formula"
 alias fnvim='nvim $(fzf --preview="bat --color=always {}")'
 alias n='nvim'
 alias c="clear && clear"
@@ -50,6 +50,7 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export HOMEBREW_NO_ENV_HINTS=1
 export HOMEBREW_NO_INSTALL_FROM_API=1
 export HOMEBREW_DEVELOPER=1
+export HOMEBREW_NO_ASK=1
 
 # Experimental Rust frontend
 export HOMEBREW_EXPERIMENTAL_RUST_FRONTEND=1

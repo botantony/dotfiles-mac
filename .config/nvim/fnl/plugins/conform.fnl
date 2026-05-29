@@ -8,7 +8,7 @@
              :lua [:stylua]
              :python [:ruff_fix :ruff_format :ruff_organize_imports]
              :rust [:rustfmt]}
-        prettier-list [:javascript :css :html :json :yaml]]
+        prettier-list [:javascript :typescript :css :html :json :yaml]]
     (each [_ v (ipairs prettier-list)]
       (tset out v [:prettier]))
     `,out))

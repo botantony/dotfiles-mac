@@ -1,14 +1,14 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "3d1efb7"
-hash = "a030fe48d91b04341ad2fba9be957df"
+rev = "ac82af3"
+hash = "f0c8c378184d5f8abd1b095a443d336d"
 
 [[flavor.deps]]
 use = "bennyyip/gruvbox-dark"
-rev = "2c61c90"
-hash = "3685f7557e7425381b65c883c688f593"
+rev = "619fdc5"
+hash = "d4c7003ec6dc4efd5d3a050d5c2f2575"
 
 [[flavor.deps]]
 use = "kmlupreti/ayu-dark"
-rev = "648a178"
-hash = "97124aae31cd2a5cae41c93f804996a5"
+rev = "1da67a8"
+hash = "4358d2053d15bd6855968e2d4646c744"
