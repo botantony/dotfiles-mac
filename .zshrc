@@ -1,5 +1,12 @@
 PROMPT="%1~ λ "
 
+if [[ $(uname) == "Linux" ]]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+  autoload -Uz compinit
+  compinit
+fi
+
 set -o vi
 set -o ignoreeof
 
