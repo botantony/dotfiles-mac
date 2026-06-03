@@ -1,5 +1,6 @@
-tap "botantony/cmake3", "https://github.com/botantony/homebrew-cmake3.git"
-tap "botantony/terraria-server", "https://github.com/botantony/homebrew-terraria-server.git"
+tap "botantony/cmake3", "https://github.com/botantony/homebrew-cmake3.git", trusted: true
+tap "andrew/brew-vulns", "https://github.com/Homebrew/homebrew-brew-vulns.git", trusted: true
+tap "Sikarugir-App/sikarugir", "https://github.com/Sikarugir-App/homebrew-sikarugir.git", trusted: true
 tap "homebrew/cask"
 tap "homebrew/core"
 brew "apktool"
@@ -8,7 +9,7 @@ brew "asciinema"
 brew "autoconf"
 brew "automake"
 brew "bison"
-brew "botantony/cmake3/cmake3"
+brew "botantony/cmake3/cmake3", trusted: true
 brew "btop"
 brew "cling"
 brew "clojure"
@@ -77,6 +78,7 @@ brew "python@3.13"
 brew "python"
 brew "qemu"
 brew "qt"
+brew "ratty"
 brew "readline"
 brew "ripgrep"
 brew "ruby"
@@ -114,6 +116,7 @@ cask "iina"
 cask "kitty"
 cask "obsidian"
 cask "orion"
+cask "Sikarugir-App/sikarugir/sikarugir", trusted: true
 cask "telegram"
 cask "utm"
 cask "virtualbuddy"
