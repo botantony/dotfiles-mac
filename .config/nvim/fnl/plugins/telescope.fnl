@@ -9,10 +9,7 @@
                  ;; `cond` is a condition used to determine whether this plugin should be
                  ;; installed and loaded.
                  :cond #(= (vim.fn.executable :make) 1)}
-                [:nvim-telescope/telescope-ui-select.nvim]
-                ;; Useful for getting pretty icons, but requires a Nerd Font.
-                {1 :nvim-tree/nvim-web-devicons
-                 :enabled vim.g.have_nerd_font}]
+                [:nvim-telescope/telescope-ui-select.nvim]]
  :config #(let [telescope (require :telescope)
                 themes (require :telescope.themes)
                 builtin (require :telescope.builtin)]

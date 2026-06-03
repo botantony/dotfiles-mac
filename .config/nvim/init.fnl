@@ -142,17 +142,18 @@
                                                                   {:clear true})
                               :callback #(vim.highlight.on_yank)})
 
-;; Gruber Darker
-;; (local theme-options {:url "https://github.com/blazkowolf/gruber-darker.nvim"
-;;                       :colorscheme :gruber-darker})
+(local themes {:gruber {:url "https://github.com/blazkowolf/gruber-darker.nvim"
+                        :colorscheme :gruber-darker}
+               :alabaster {:url "https://git.sr.ht/~p00f/alabaster.nvim"
+                           :colorscheme :alabaster}})
 
-(local theme-options {:url "https://git.sr.ht/~p00f/alabaster.nvim"
-                      :colorscheme :alabaster})
+(local current-theme :alabaster)
 
-(local no-config-plugins [{:url (. theme-options :url)
+(local no-config-plugins [{:url (. themes current-theme :url)
                            :priority 1000
                            :init #(do
-                                    (vim.cmd.colorscheme (. theme-options
+                                    (vim.cmd.colorscheme (. themes
+                                                            current-theme
                                                             :colorscheme))
                                     (vim.cmd.hi "Comment gui=none"))}
                           :tpope/vim-sleuth
